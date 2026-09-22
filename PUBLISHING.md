@@ -54,8 +54,15 @@ WorkshopTool publishx4 ^
 ```
 
 Check `ext_01.cat` — a plain-text index, one line per packed file — before answering
-`y` at the upload prompt. Four entries are expected: `content.xml`, `ui.xml`,
-`ui/mk_save_sort_by_date.lua`, `LICENSE`.
+`y` at the upload prompt. **Three** entries are expected: `LICENSE`, `ui.xml` and
+`ui/mk_save_sort_by_date.lua`. `content.xml` is *not* among them: the catalog tool
+excludes root-level `.xml` (`^[^/]*\.(xml|cat|dat|jpg|png)$`) and `WorkshopTool`
+uploads it separately — its output says "in addition to content.xml". `ui.xml` is only
+there because the tool adds an explicit `-include ui.xml`. Measured 2026-09-22 with
+tool v1.15 / catalog tool v1.11.
+
+The three sizes also sum to the byte size of `ext_01.dat`, which is a second check that
+nothing else was packed.
 
 **The item is created hidden.** Visibility is set on its web page afterwards, so a
 first publish is safe to run and review; `WorkshopTool showpage` opens it.
