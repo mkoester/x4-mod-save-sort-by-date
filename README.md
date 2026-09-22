@@ -77,6 +77,12 @@ git -C "$X4/extensions/mk_save_sort_by_date" pull             # update
 On Linux the folder name **must** be lowercase — a mixed-case extension directory
 is skipped in silence, with no error anywhere.
 
+## Publishing
+
+[`PUBLISHING.md`](PUBLISHING.md) has the Steam Workshop steps — the short version of
+the sibling mod's, with the staging copy and the preview-image requirement for this
+mod. Not published yet.
+
 ## Licence
 
 [MIT](LICENSE) — Copyright (c) 2026 Mirko Köster.

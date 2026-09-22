@@ -1,0 +1,29 @@
+[b]Opens the Load Game and Save Game menus sorted by date, newest first[/b], instead of by savegame slot.
+
+That is the whole mod. One small Lua file, no dependencies, no settings, nothing else changed.
+
+[h1]What changes[/h1]
+
+Vanilla sorts those menus by slot: quicksave first, then up to three autosaves, then slots 1 to 10 in numeric order. Sorting by date collapses all of them into one newest-first list, so the save you actually want is at the top — whether it came from a slot, an autosave or a quicksave.
+
+On the Save menu, quicksave and autosaves are left out (you cannot write to them) and unused slots follow the list.
+
+[h1]The column headers still work[/h1]
+
+This is a starting sort, not a lock. Click [b]Slot[/b] or [b]Name[/b] and it stays that way for the rest of your session, exactly as in the unmodded game; [b]Date[/b] comes back the next time the UI loads.
+
+[h1]Compatibility[/h1]
+
+[list]
+[*] No dependencies and no other mod required.
+[*] [b]Works with Protected UI Mode left on.[/b] It replaces no game file and uses no FFI and no require, so nothing it does is restricted.
+[*] It sets one field in the game's own options menu — it does not reimplement the menu, so it does not fight UI mods over how the list is drawn.
+[*] Safe to add or remove at any time ([i]save="false"[/i]): it writes nothing into your savegame and nothing to disk.
+[*] Works on Linux and Windows.
+[/list]
+
+[h1]Source[/h1]
+
+Full source, three files, and an explanation of exactly which field it sets and why it is set once rather than enforced: [url=https://github.com/mkoester/x4-mod-save-sort-by-date]GitHub[/url]
+
+Released under the [b]MIT licence[/b] — use it, fork it, learn from it.
