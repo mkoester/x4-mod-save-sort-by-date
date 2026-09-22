@@ -27,10 +27,18 @@ subscriber. Stage only what the game loads, plus `LICENSE`:
 STAGE=../.publish/mk_save_sort_by_date        # gitignored in the workspace
 rm -rf "$STAGE" && mkdir -p "$STAGE"
 cp -r content.xml ui.xml ui LICENSE "$STAGE"/
+sed -i 's/id="mk_save_sort_by_date"/id="ws_3806277222"/' "$STAGE"/content.xml
 ```
 
 The staging **folder name is the mod name** the tool uses, so it must read
 `mk_save_sort_by_date`.
+
+⚠ **That `sed` is not optional.** `content.xml` here carries the *development* id
+`mk_save_sort_by_date`, not the Workshop id, so that a dev symlink under the game's
+`extensions/` can be enabled and disabled independently of the subscribed copy — they
+would otherwise share an id, which is what X4 keys enabled/disabled on. But
+`WorkshopTool update` resolves the item from the id in the file it is given, so the
+staging copy must carry **`ws_3806277222`** or the update will not find the item.
 
 ## Preview image
 
@@ -83,8 +91,9 @@ rewritten file is what makes `WorkshopTool update` able to find the item again.
 ## This mod
 
 Published 2026-09-22 as **`ws_3806277222`** —
-[Workshop page](https://steamcommunity.com/sharedfiles/filedetails/?id=3806277222). The id is
-in `content.xml`, which is what `update` keys on.
+[Workshop page](https://steamcommunity.com/sharedfiles/filedetails/?id=3806277222). It is **not**
+in `content.xml` — that holds the development id; the staging step above injects the `ws_` id,
+and that is what `update` keys on.
 
 ## After publishing
 
