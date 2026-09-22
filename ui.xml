@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <dependency> on ego_gameoptions is load ORDER, not a feature dependency:
+     addon.xsd states a dependant addon is loaded after the one it names, and we
+     need OptionsMenu to already be in the global Menus list when our file runs. -->
+<addon name="mk_save_sort_by_date" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../ui/core/addon.xsd">
+  <environment type="menus">
+    <file name="ui/mk_save_sort_by_date.lua" />
+    <dependency name="ego_gameoptions" />
+  </environment>
+</addon>
