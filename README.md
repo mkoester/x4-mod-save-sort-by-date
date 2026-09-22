@@ -70,7 +70,9 @@ setting cannot persist across sessions without an options entry of its own.
 
 ## Install
 
-The repository root *is* the extension, so there is nothing to extract:
+**[Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3806277222)** is the
+easy way. To run it from source instead — the repository root *is* the extension, so
+there is nothing to extract:
 
 ```sh
 X4="$HOME/.local/share/Steam/steamapps/common/X4 Foundations"
@@ -85,7 +87,7 @@ is skipped in silence, with no error anywhere.
 
 [`PUBLISHING.md`](PUBLISHING.md) has the Steam Workshop steps — the short version of
 the sibling mod's, with the staging copy and the preview-image requirement for this
-mod. Not published yet.
+mod. First published 2026-09-22 as `ws_3806277222`.
 
 ## Licence
 

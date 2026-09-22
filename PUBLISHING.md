@@ -80,6 +80,12 @@ git add content.xml && git commit -m "chore: record the Workshop id"
 Measured on the sibling mod on 2026-09-21: it happened exactly as described, and the
 rewritten file is what makes `WorkshopTool update` able to find the item again.
 
+## This mod
+
+Published 2026-09-22 as **`ws_3806277222`** —
+[Workshop page](https://steamcommunity.com/sharedfiles/filedetails/?id=3806277222). The id is
+in `content.xml`, which is what `update` keys on.
+
 ## After publishing
 
 - Paste the BBCode from `workshop-description.txt` into the page by hand — subscribers
