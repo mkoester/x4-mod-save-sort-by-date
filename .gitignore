@@ -4,3 +4,6 @@ ext_01.dat
 
 # Steam signature files, added on the consumer side.
 *.sig
+
+# Screenshot source for preview.jpg -- 5 MB and not needed by anything.
+preview.png

@@ -29,9 +29,13 @@ because the slot rows are labelled with the save names.
 ## What "by date" looks like, and why it is not just a reordering
 
 In slot order the Load menu prints three blocks: quicksave, then up to three
-autosaves, then slots 1–10 in numeric order. In date order all of those collapse
+autosaves, then the numbered slots in order. In date order all of those collapse
 into **one** newest-first list, which is the point — the save you want is at the
 top whether it came from a slot, an autosave or a quicksave.
+
+(Vanilla 9.0x has ten slots and caps the autosave block at three — both are literal
+constants in `gameoptions.lua`. A UI mod that substitutes that file can change them:
+with kuertee's UI Extensions active there are twenty slots, as in `preview.jpg`.)
 
 On the Save menu quicksave and autosaves are excluded (you cannot write to them)
 and unused slots are appended after the list.

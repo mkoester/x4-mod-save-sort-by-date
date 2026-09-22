@@ -4,7 +4,7 @@ That is the whole mod. One small Lua file, no dependencies, no settings, nothing
 
 [h1]What changes[/h1]
 
-Vanilla sorts those menus by slot: quicksave first, then up to three autosaves, then slots 1 to 10 in numeric order. Sorting by date collapses all of them into one newest-first list, so the save you actually want is at the top — whether it came from a slot, an autosave or a quicksave.
+Vanilla sorts those menus by slot: quicksave first, then the most recent autosaves, then the numbered slots in order. Sorting by date collapses all of them into one newest-first list, so the save you actually want is at the top — whether it came from a slot, an autosave or a quicksave.
 
 On the Save menu, quicksave and autosaves are left out (you cannot write to them) and unused slots follow the list.
 

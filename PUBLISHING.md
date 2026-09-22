@@ -34,11 +34,15 @@ The staging **folder name is the mod name** the tool uses, so it must read
 
 ## Preview image
 
-Required, and it is the one asset not in this repo yet: JPG or PNG, widescreen,
-640x360 or larger (the sibling mod ships 1920x1080). The obvious shot is the **Load
-Game menu with the date column header active and the newest save at the top** — it
-shows the whole feature in one frame. Put it at `preview.jpg` in the repo root; root
-`.jpg` is one of the extensions `-buildcat` filters out, so it does not need staging.
+`preview.jpg` is in the repo root: 1920x1080, 266 KB — the Load Game menu with the
+Date header active and the newest save on top, which shows the whole feature in one
+frame. It is a 16:9 crop of a 3440x1440 ultrawide screenshot (`preview.png`, kept out
+of git), taken from the left so the list stays at native resolution and stays legible
+at thumbnail size.
+
+Steam wants JPG or PNG, widescreen, 640x360 or larger, and caps the preview at 1 MB.
+Root `.jpg` is one of the extensions `-buildcat` filters out, so it does not need
+staging — `-preview` points at it in the repo, not in the staging copy.
 
 ## First publish
 
